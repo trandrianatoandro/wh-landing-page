@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="<!-- À COMPLÉTER -->">
+    <meta name="robots" content="noindex,nofollow">
+    <meta property="og:title" content="Widehalo est en preparation">
+    <meta property="og:description" content="Widehalo est en preparation">
+    <title>WideHalo en préparation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <style>:root{--marine:#14213D;--sarcelle:#0F766E;--sarcelle-light:#10B981;--ambre:#B45309;--blanc:#F8FAFC;--text:rgba(248,250,252,.85);--border:rgba(15,118,110,.2);--glow:rgba(16,185,129,.3)}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(16,185,129,.08) 0%, rgba(20,33,61,1) 35%, rgba(20,33,61,1) 100%);color:var(--blanc);line-height:1.7;-webkit-font-smoothing:antialiased}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}a{color:var(--blanc);text-decoration:none}a:focus{outline:2px solid var(--sarcelle-light);outline-offset:2px}input,textarea,select,button{font-family:inherit;font-size:1rem}input,textarea,select{background:rgba(248,250,252,.05);border:1px solid var(--border);color:var(--blanc);padding:.85rem 1.25rem;border-radius:8px}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--sarcelle-light);box-shadow:0 0 0 3px var(--glow)}button{background:var(--sarcelle);color:var(--blanc);border:none;padding:.85rem 2rem;border-radius:8px;cursor:pointer;transition:all .3s cubic-bezier(.25,.8,.25,1);position:relative;overflow:hidden}.btn-glow::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(255,255,255,.1) 0%,transparent 50%);transform:translateX(-100%);transition:transform .4s}.btn-glow:hover::before{transform:translateX(100%)}button:hover,button:focus{background:var(--sarcelle-light);transform:translateY(-2px);box-shadow:0 8px 25px var(--glow)}button:focus:not(:hover){outline:2px solid var(--sarcelle-light);outline-offset:2px}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem}.header{display:flex;align-items:center;justify-content:space-between;padding:2rem 0;position:relative;z-index:10}.logo{display:flex;align-items:center;gap:1rem;font-size:clamp(1.1rem,2.5vw,1.3rem);font-weight:500;letter-spacing:.18em;text-decoration:none}.logo-halo{width:36px;height:36px}@media(min-width:768px){.logo-halo{width:44px;height:44px}}.logo svg{width:100%;height:100%}.header-nav{display:flex;align-items:center;gap:2rem}.header-nav a{font-size:.95rem;opacity:.9;transition:opacity .2s}.header-nav a:hover,.header-nav a:focus{opacity:1}.lang-toggle{display:flex;gap:.35rem}.lang-btn{background:transparent;border:1px solid var(--border);color:var(--text);padding:.35rem .75rem;font-size:.85rem;border-radius:8px;opacity:.7;transition:all .2s cubic-bezier(.25,.8,.25,1)}.lang-btn:hover,.lang-btn:focus{opacity:1;background:rgba(248,250,252,.05);border-color:var(--sarcelle-light)}.lang-btn.active{opacity:1;border-color:var(--sarcelle-light);background:rgba(16,185,129,.1)}.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 0 2rem;position:relative;overflow:hidden}.hero-halo{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);width:clamp(280px,70vw,550px);height:clamp(280px,70vw,550px);z-index:-1}@media(prefers-reduced-motion:reduce){.hero-halo{opacity:.3}}.hero-halo svg{width:100%;height:100%;filter:drop-shadow(0 0 40px rgba(16,185,129,.25))}.hero-content{position:relative;z-index:1;max-width:900px;padding:0 1rem}.hero-surtitle{font-size:clamp(.95rem,2vw,1.1rem);color:var(--sarcelle-light);margin-bottom:1.25rem;letter-spacing:.15em;text-transform:uppercase;opacity:.9}.hero-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:300;line-height:1.1;letter-spacing:-.015em;margin-bottom:1.75rem;text-shadow:0 0 30px rgba(16,185,129,.15)}.hero-subtitle{font-size:clamp(1.1rem,2.2vw,1.35rem);color:var(--text);max-width:800px;margin:0 auto 2.5rem;line-height:1.8;opacity:.95}.hero-status{display:flex;align-items:center;justify-content:center;gap:.85rem;font-size:clamp(.95rem,1.8vw,1.1rem);color:var(--text);margin-bottom:3rem;opacity:.85}.status-dot{width:12px;height:12px;background:var(--sarcelle-light);border-radius:50%;box-shadow:0 0 15px var(--sarcelle-light);animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.3)}}@media(prefers-reduced-motion:reduce){.status-dot{animation:none}}.hero-cta{margin-top:.5rem}.btn-primary{min-width:260px}.values{padding:2rem 0;background:transparent;position:relative}.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;max-width:1000px;margin:0 auto}.value-item{text-align:center;opacity:0}.value-icon{width:70px;height:70px;margin:0 auto 1.5rem;color:var(--sarcelle-light)}.value-icon svg{width:100%;height:100%}.value-title{font-size:clamp(1.3rem,2.5vw,1.5rem);font-weight:500;margin-bottom:1rem}.value-desc{color:var(--text);line-height:1.8;font-size:1.05rem}.contact-section{padding:3rem 0;background:transparent;position:relative}.contact-title{font-size:clamp(1.8rem,3.5vw,2.2rem);text-align:center;margin-bottom:1.25rem;font-weight:400}.contact-intro{font-size:clamp(1.1rem,2vw,1.25rem);color:var(--text);max-width:750px;margin:0 auto 2.75rem;line-height:1.8;text-align:center;opacity:.9}.contact-form{max-width:650px;margin:0 auto;text-align:left;opacity:0}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}.form-group{margin-bottom:1.5rem}.form-group label{display:block;margin-bottom:.6rem;font-size:.95rem;opacity:.9}.form-group input,.form-group textarea,.form-group select{width:100%}.form-group textarea{min-height:110px;resize:vertical}.honeypot{position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none}.consent-group{display:flex;align-items:flex-start;gap:.85rem;margin-top:1.75rem}.consent-group input[type="checkbox"]{width:auto;margin-top:.35rem}.consent-group label{font-size:.95rem;color:var(--text);line-height:1.6}.form-footer{text-align:center;margin-top:1.75rem;font-size:.9rem;color:var(--text);max-width:550px;margin-left:auto;margin-right:auto;opacity:.8}.form-message{text-align:center;margin:2rem 0;font-size:1.2rem;color:var(--sarcelle-light);min-height:1.5rem}.footer{padding:3rem 0;text-align:center;font-size:.9rem;color:var(--text);border-top:1px solid var(--border);opacity:.7}.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:1.25rem}.footer-links button{background:transparent;border:1px solid var(--border);color:var(--text);padding:.4rem 1rem;border-radius:8px;font-size:.9rem;opacity:.8;transition:all .2s cubic-bezier(.25,.8,.25,1)}.footer-links button:hover,.footer-links button:focus{opacity:1;border-color:var(--sarcelle-light);background:rgba(16,185,129,.05)}dialog{background:rgba(20,33,61,.99);color:var(--blanc);border:1px solid var(--border);border-radius:12px;padding:2rem;max-width:550px;max-height:80vh;overflow:auto;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;opacity:0;transform:translate(-50%,-50%) scale(.95);transition:opacity .3s cubic-bezier(.25,.8,.25,1),transform .3s cubic-bezier(.25,.8,.25,1)}dialog[open]{opacity:1;transform:translate(-50%,-50%) scale(1)}dialog::backdrop{background:rgba(0,0,0,.8)}dialog h3{margin-top:0;margin-bottom:1.5rem;font-size:1.4rem;font-weight:400}dialog p{margin-bottom:1rem;color:var(--text);line-height:1.8}dialog p:last-child{margin-bottom:1.5rem}dialog .close-btn{background:var(--sarcelle);color:var(--blanc);border:none;padding:.6rem 1.5rem;border-radius:8px;font-size:.95rem;cursor:pointer;transition:all .2s cubic-bezier(.25,.8,.25,1)}dialog .close-btn:hover,dialog .close-btn:focus{background:var(--sarcelle-light);transform:translateY(-1px)}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(min-width:768px){.header{padding:2.5rem 0}.hero{padding:6rem 0 3rem}.hero-content{padding:0 3rem}.values{padding:3rem 0}.contact-section{padding:4rem 0}.footer{padding:3.5rem 0}.footer-links{gap:2.5rem}}
+    </style>
+</head>
+<body>
+    <header class="header container">
+        <a href="#" class="logo" aria-label="WideHalo">
+            <span class="logo-halo">
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <defs>
+                        <radialGradient id="hg" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" stop-color="#10B981" stop-opacity=".9"/>
+                            <stop offset="100%" stop-color="#0F766E" stop-opacity=".3"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#hg)" stroke-width="4"/>
+                </svg>
+            </span>
+            WIDEHALO
+        </a>
+        <nav class="header-nav">
+            <a href="#contact" data-i18n="navContact">Contact</a>
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+                <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-halo" id="mainHalo">
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <defs>
+                        <radialGradient id="hg2" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+                            <stop offset="0%" stop-color="#10B981" stop-opacity=".15"/>
+                            <stop offset="100%" stop-color="#0F766E" stop-opacity="0"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="url(#hg2)" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <p class="hero-surtitle" data-i18n="surtitle">En préparation</p>
+                <h1 class="hero-title" data-i18n="title">Quelque chose de large se prépare.</h1>
+                <p class="hero-subtitle" data-i18n="subtitle">WideHalo construit, entre l'Europe et l'Afrique, une nouvelle manière d'associer technologie, confiance et expertise humaine au service des organisations.</p>
+                <p class="hero-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span data-i18n="status">Les travaux avancent. Ouverture progressive à des partenaires sélectionnés.</span>
+                </p>
+                <a href="#contact" class="btn-primary btn-glow" data-i18n="cta">Devenir partenaire</a>
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="container values-grid">
+                <article class="value-item reveal">
+                    <div class="value-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h2 class="value-title" data-i18n="val1Title">Exigence</h2>
+                    <p class="value-desc" data-i18n="val1Desc">Nous construisons lentement ce qui doit durer.</p>
+                </article>
+                <article class="value-item reveal">
+                    <div class="value-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h2 class="value-title" data-i18n="val2Title">Confiance</h2>
+                    <p class="value-desc" data-i18n="val2Desc">La transparence et la maîtrise des données comme principes.</p>
+                </article>
+                <article class="value-item reveal">
+                    <div class="value-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <circle cx="12" cy="5" r="1"/>
+                            <circle cx="12" cy="19" r="1"/>
+                            <circle cx="5" cy="12" r="1"/>
+                            <circle cx="19" cy="12" r="1"/>
+                            <circle cx="12" cy="12" r="1"/>
+                        </svg>
+                    </div>
+                    <h2 class="value-title" data-i18n="val3Title">Proximité</h2>
+                    <p class="value-desc" data-i18n="val3Desc">Des équipes au plus près des organisations que nous servons.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="contact-title reveal" data-i18n="contactTitle">Échangeons</h2>
+                <p class="contact-intro reveal" data-i18n="contactIntro">Vous êtes une organisation, un intégrateur, un cabinet ou un investisseur intéressé par une collaboration ? Laissez-nous vos coordonnées : nous revenons vers vous personnellement.</p>
+                <form id="contactForm" class="contact-form reveal">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name" data-i18n="nameLabel">Nom</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="organization" data-i18n="orgLabel">Organisation</label>
+                            <input type="text" id="organization" name="organization" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="role" data-i18n="roleLabel">Fonction</label>
+                            <input type="text" id="role" name="role" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="emailLabel">Email professionnel</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="country" data-i18n="countryLabel">Pays</label>
+                            <input type="text" id="country" name="country" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="relation" data-i18n="relationLabel">Type de relation</label>
+                            <select id="relation" name="relation" required aria-required="true">
+                                <option value="" selected disabled data-i18n="relationPlaceholder">Sélectionnez</option>
+                                <option value="technological" data-i18n="relationTech">Partenaire technologique</option>
+                                <option value="commercial" data-i18n="relationComm">Partenaire commercial</option>
+                                <option value="pilot" data-i18n="relationPilot">Client pilote</option>
+                                <option value="other" data-i18n="relationOther">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="messageLabel">Message court (facultatif, 500 caractères max)</label>
+                        <textarea id="message" name="message" maxlength="500" aria-describedby="message-hint"></textarea>
+                        <span id="message-hint" class="visually-hidden" data-i18n="messageHint">500 caractères maximum</span>
+                    </div>
+                    <input type="text" name="honeypot" class="honeypot" tabindex="-1" autocomplete="off">
+                    <div class="consent-group">
+                        <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                        <label for="consent" data-i18n="consentLabel">J'accepte que mes données soient utilisées uniquement pour me recontacter.</label>
+                    </div>
+                    <p class="form-footer" data-i18n="formFooter">Vos informations servent uniquement à vous recontacter. Elles ne sont ni revendues ni partagées.</p>
+                    <button type="submit" class="btn-primary btn-glow" data-i18n="submitBtn">Envoyer</button>
+                    <p id="formMessage" class="form-message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 WideHalo</p>
+            <div class="footer-links">
+                <button id="legalBtn" data-i18n="legalBtn">Mentions légales</button>
+                <button id="privacyBtn" data-i18n="privacyBtn">Confidentialité</button>
+            </div>
+        </div>
+    </footer>
+
+    <dialog id="legalDialog">
+        <h3 data-i18n="legalTitle">Mentions légales</h3>
+        <p data-i18n="legalEditor">Éditeur :  contact[at]widehalo[dot]com</p>
+        <p data-i18n="legalContact">Contact : contact[at]widehalo[dot]com</p>
+        <button class="close-btn" id="closeLegal" data-i18n="closeBtn">Fermer</button>
+    </dialog>
+
+    <dialog id="privacyDialog">
+        <h3 data-i18n="privacyTitle">Confidentialité</h3>
+        <p data-i18n="privacyData">Données collectées : nom, organisation, fonction, email, pays, type de relation, message.</p>
+        <p data-i18n="privacyPurpose">Finalité : prise de contact pour une éventuelle collaboration.</p>
+        <p data-i18n="privacyDuration">Durée de conservation : 12 mois.</p>
+        <p data-i18n="privacyRights">Droits : accès, rectification, suppression. Contact : contact[at]widehalo[dot]com</p>
+        <button class="close-btn" id="closePrivacy" data-i18n="closeBtn">Fermer</button>
+    </dialog>
+
+    <script>
+const FORM_ENDPOINT="";const CONTACT_EMAIL="contact@widehalo.com";const t={fr:{navContact:"Contact",surtitle:"En préparation",title:"Quelque chose de large se prépare.",subtitle:"WideHalo construit, entre l'Europe et l'Afrique, une nouvelle manière d'associer technologie, confiance et expertise humaine au service des organisations.",status:"Les travaux avancent. Ouverture progressive à des partenaires sélectionnés.",cta:"Devenir partenaire",contactTitle:"Échangeons",contactIntro:"Vous êtes une organisation, un intégrateur, un cabinet ou un investisseur intéressé par une collaboration ? Laissez-nous vos coordonnées : nous revenons vers vous personnellement.",nameLabel:"Nom",orgLabel:"Organisation",roleLabel:"Fonction",emailLabel:"Email professionnel",countryLabel:"Pays",relationLabel:"Type de relation",relationPlaceholder:"Sélectionnez",relationTech:"Partenaire technologique",relationComm:"Partenaire commercial",relationPilot:"Client pilote",relationOther:"Autre",messageLabel:"Message court (facultatif, 500 caractères max)",messageHint:"500 caractères maximum",consentLabel:"J'accepte que mes données soient utilisées uniquement pour me recontacter.",formFooter:"Vos informations servent uniquement à vous recontacter. Elles ne sont ni revendues ni partagées.",submitBtn:"Envoyer",successMsg:"Merci. Votre message est bien arrivé ; nous vous répondrons personnellement.",errorMsg:"Erreur. Veuillez réessayer.",legalBtn:"Mentions légales",legalTitle:"Mentions légales",legalEditor:"Éditeur : <!-- À COMPLÉTER -->",legalContact:"Contact : <!-- À COMPLÉTER -->",legalHost:"Hébergeur : <!-- À COMPLÉTER -->",privacyBtn:"Confidentialité",privacyTitle:"Confidentialité",privacyData:"Données collectées : nom, organisation, fonction, email, pays, type de relation, message.",privacyPurpose:"Finalité : prise de contact pour une éventuelle collaboration.",privacyDuration:"Durée de conservation : 12 mois.",privacyRights:"Droits : accès, rectification, suppression. Contact : <!-- À COMPLÉTER -->",closeBtn:"Fermer"},en:{navContact:"Contact",surtitle:"Under construction",title:"Something wide is taking shape.",subtitle:"WideHalo is building, between Europe and Africa, a new way of combining technology, trust and human expertise for the benefit of organisations.",status:"Work is progressing. Gradual opening to selected partners.",cta:"Become a partner",contactTitle:"Let's talk",contactIntro:"Are you an organisation, integrator, firm or investor interested in collaboration? Leave us your details: we will get back to you personally.",nameLabel:"Name",orgLabel:"Organisation",roleLabel:"Role",emailLabel:"Professional email",countryLabel:"Country",relationLabel:"Type of relationship",relationPlaceholder:"Select",relationTech:"Technological partner",relationComm:"Commercial partner",relationPilot:"Pilot client",relationOther:"Other",messageLabel:"Short message (optional, 500 characters max)",messageHint:"500 characters maximum",consentLabel:"I accept that my data will be used solely to contact me.",formFooter:"Your information is used only to contact you. It is neither sold nor shared.",submitBtn:"Send",successMsg:"Thank you. Your message has been received; we will respond personally.",errorMsg:"Error. Please try again.",legalBtn:"Legal notices",legalTitle:"Legal notices",legalEditor:"Publisher: <!-- À COMPLÉTER -->",legalContact:"Contact: <!-- À COMPLÉTER -->",legalHost:"Host: <!-- À COMPLÉTER -->",privacyBtn:"Privacy",privacyTitle:"Privacy",privacyData:"Data collected: name, organisation, role, email, country, type of relationship, message.",privacyPurpose:"Purpose: contact for potential collaboration.",privacyDuration:"Retention period: 12 months.",privacyRights:"Rights: access, rectification, deletion. Contact: <!-- À COMPLÉTER -->",closeBtn:"Close"}};const l=e=>{document.querySelectorAll('[data-i18n]').forEach(n=>{const k=n.dataset.i18n;if(n.tagName==='SELECT'){Array.from(n.options).forEach(o=>{if(o.dataset.i18n){o.textContent=t[e][o.dataset.i18n]}})}else if(n.tagName!=='OPTION'||!n.dataset.i18n){n.textContent=t[e][k]}})};const s=e=>{document.querySelectorAll('.lang-btn').forEach(n=>{n.classList.toggle('active',n.dataset.lang===e)})};document.addEventListener('DOMContentLoaded',()=>{l('fr');s('fr');document.querySelectorAll('.lang-btn').forEach(b=>{b.addEventListener('click',()=>{l(b.dataset.lang);s(b.dataset.lang)})});gsap.registerPlugin(ScrollTrigger);gsap.to("#mainHalo",{duration:12,scale:1.2,rotation:360,opacity:0.35,ease:"sine.inOut",repeat:-1,yoyo:true});gsap.to("#mainHalo svg circle",{duration:8,attr:{r:45},strokeWidth:3,ease:"sine.inOut",repeat:-1,yoyo:true});gsap.utils.toArray('.reveal').forEach((el,i)=>{gsap.from(el,{scrollTrigger:{trigger:el,start:"top 88%",toggleActions:"play none none reverse"},y:40,opacity:0,duration:1.2,ease:"power2.out",delay:i*.08})});const f=document.getElementById('contactForm');const m=document.getElementById('formMessage');f.addEventListener('submit',async e=>{e.preventDefault();const hp=f.querySelector('.honeypot').value;if(hp)return;const d={name:f.name.value,organization:f.organization.value,role:f.role.value,email:f.email.value,country:f.country.value,relation:f.relation.value,message:f.message.value,consent:f.consent.checked};if(!d.consent){m.textContent=t[f.dataset.lang||'fr'].consentLabel;m.style.color='#B45309';return}if(FORM_ENDPOINT){try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});if(r.ok){m.textContent=t[f.dataset.lang||'fr'].successMsg;m.style.color='var(--sarcelle-light)';f.reset()}else{m.textContent=t[f.dataset.lang||'fr'].errorMsg;m.style.color='#B45309'}}catch{m.textContent=t[f.dataset.lang||'fr'].errorMsg;m.style.color='#B45309'}}}else{const params=new URLSearchParams(d);window.location.href=`mailto:${CONTACT_EMAIL}?${params.toString()}`}});document.getElementById('legalBtn').addEventListener('click',()=>document.getElementById('legalDialog').showModal());document.getElementById('closeLegal').addEventListener('click',()=>document.getElementById('legalDialog').close());document.getElementById('privacyBtn').addEventListener('click',()=>document.getElementById('privacyDialog').showModal());document.getElementById('closePrivacy').addEventListener('click',()=>document.getElementById('privacyDialog').close())});
+    </script>
+</body>
+</html>
