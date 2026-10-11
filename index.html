@@ -1,189 +1,1361 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Widehalo est en preparation">
-    <meta name="robots" content="noindex,nofollow">
-    <meta property="og:title" content="Widehalo est en preparation">
-    <meta property="og:description" content="Widehalo est en preparation">
-    <title>WideHalo en préparation</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    <style>:root{--marine:#14213D;--sarcelle:#0F766E;--sarcelle-light:#10B981;--ambre:#B45309;--blanc:#F8FAFC;--text:rgba(248,250,252,.85);--border:rgba(15,118,110,.2);--glow:rgba(16,185,129,.3)}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(16,185,129,.08) 0%, rgba(20,33,61,1) 35%, rgba(20,33,61,1) 100%);color:var(--blanc);line-height:1.7;-webkit-font-smoothing:antialiased}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}a{color:var(--blanc);text-decoration:none}a:focus{outline:2px solid var(--sarcelle-light);outline-offset:2px}input,textarea,select,button{font-family:inherit;font-size:1rem}input,textarea,select{background:rgba(248,250,252,.05);border:1px solid var(--border);color:var(--blanc);padding:.85rem 1.25rem;border-radius:8px}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--sarcelle-light);box-shadow:0 0 0 3px var(--glow)}button{background:var(--sarcelle);color:var(--blanc);border:none;padding:.85rem 2rem;border-radius:8px;cursor:pointer;transition:all .3s cubic-bezier(.25,.8,.25,1);position:relative;overflow:hidden}.btn-glow::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(255,255,255,.1) 0%,transparent 50%);transform:translateX(-100%);transition:transform .4s}.btn-glow:hover::before{transform:translateX(100%)}button:hover,button:focus{background:var(--sarcelle-light);transform:translateY(-2px);box-shadow:0 8px 25px var(--glow)}button:focus:not(:hover){outline:2px solid var(--sarcelle-light);outline-offset:2px}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem}.header{display:flex;align-items:center;justify-content:space-between;padding:2rem 0;position:relative;z-index:10}.logo{display:flex;align-items:center;gap:1rem;font-size:clamp(1.1rem,2.5vw,1.3rem);font-weight:500;letter-spacing:.18em;text-decoration:none}.logo-halo{width:36px;height:36px}@media(min-width:768px){.logo-halo{width:44px;height:44px}}.logo svg{width:100%;height:100%}.header-nav{display:flex;align-items:center;gap:2rem}.header-nav a{font-size:.95rem;opacity:.9;transition:opacity .2s}.header-nav a:hover,.header-nav a:focus{opacity:1}.lang-toggle{display:flex;gap:.35rem}.lang-btn{background:transparent;border:1px solid var(--border);color:var(--text);padding:.35rem .75rem;font-size:.85rem;border-radius:8px;opacity:.7;transition:all .2s cubic-bezier(.25,.8,.25,1)}.lang-btn:hover,.lang-btn:focus{opacity:1;background:rgba(248,250,252,.05);border-color:var(--sarcelle-light)}.lang-btn.active{opacity:1;border-color:var(--sarcelle-light);background:rgba(16,185,129,.1)}.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 0 2rem;position:relative;overflow:hidden}.hero-halo{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);width:clamp(280px,70vw,550px);height:clamp(280px,70vw,550px);z-index:-1}@media(prefers-reduced-motion:reduce){.hero-halo{opacity:.3}}.hero-halo svg{width:100%;height:100%;filter:drop-shadow(0 0 40px rgba(16,185,129,.25))}.hero-content{position:relative;z-index:1;max-width:900px;padding:0 1rem}.hero-surtitle{font-size:clamp(.95rem,2vw,1.1rem);color:var(--sarcelle-light);margin-bottom:1.25rem;letter-spacing:.15em;text-transform:uppercase;opacity:.9}.hero-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:300;line-height:1.1;letter-spacing:-.015em;margin-bottom:1.75rem;text-shadow:0 0 30px rgba(16,185,129,.15)}.hero-subtitle{font-size:clamp(1.1rem,2.2vw,1.35rem);color:var(--text);max-width:800px;margin:0 auto 2.5rem;line-height:1.8;opacity:.95}.hero-status{display:flex;align-items:center;justify-content:center;gap:.85rem;font-size:clamp(.95rem,1.8vw,1.1rem);color:var(--text);margin-bottom:3rem;opacity:.85}.status-dot{width:12px;height:12px;background:var(--sarcelle-light);border-radius:50%;box-shadow:0 0 15px var(--sarcelle-light);animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.3)}}@media(prefers-reduced-motion:reduce){.status-dot{animation:none}}.hero-cta{margin-top:.5rem}.btn-primary{min-width:260px}.values{padding:2rem 0;background:transparent;position:relative}.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;max-width:1000px;margin:0 auto}.value-item{text-align:center;opacity:0}.value-icon{width:70px;height:70px;margin:0 auto 1.5rem;color:var(--sarcelle-light)}.value-icon svg{width:100%;height:100%}.value-title{font-size:clamp(1.3rem,2.5vw,1.5rem);font-weight:500;margin-bottom:1rem}.value-desc{color:var(--text);line-height:1.8;font-size:1.05rem}.contact-section{padding:3rem 0;background:transparent;position:relative}.contact-title{font-size:clamp(1.8rem,3.5vw,2.2rem);text-align:center;margin-bottom:1.25rem;font-weight:400}.contact-intro{font-size:clamp(1.1rem,2vw,1.25rem);color:var(--text);max-width:750px;margin:0 auto 2.75rem;line-height:1.8;text-align:center;opacity:.9}.contact-form{max-width:650px;margin:0 auto;text-align:left;opacity:0}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}.form-group{margin-bottom:1.5rem}.form-group label{display:block;margin-bottom:.6rem;font-size:.95rem;opacity:.9}.form-group input,.form-group textarea,.form-group select{width:100%}.form-group textarea{min-height:110px;resize:vertical}.honeypot{position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none}.consent-group{display:flex;align-items:flex-start;gap:.85rem;margin-top:1.75rem}.consent-group input[type="checkbox"]{width:auto;margin-top:.35rem}.consent-group label{font-size:.95rem;color:var(--text);line-height:1.6}.form-footer{text-align:center;margin-top:1.75rem;font-size:.9rem;color:var(--text);max-width:550px;margin-left:auto;margin-right:auto;opacity:.8}.form-message{text-align:center;margin:2rem 0;font-size:1.2rem;color:var(--sarcelle-light);min-height:1.5rem}.footer{padding:3rem 0;text-align:center;font-size:.9rem;color:var(--text);border-top:1px solid var(--border);opacity:.7}.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:1.25rem}.footer-links button{background:transparent;border:1px solid var(--border);color:var(--text);padding:.4rem 1rem;border-radius:8px;font-size:.9rem;opacity:.8;transition:all .2s cubic-bezier(.25,.8,.25,1)}.footer-links button:hover,.footer-links button:focus{opacity:1;border-color:var(--sarcelle-light);background:rgba(16,185,129,.05)}dialog{background:rgba(20,33,61,.99);color:var(--blanc);border:1px solid var(--border);border-radius:12px;padding:2rem;max-width:550px;max-height:80vh;overflow:auto;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;opacity:0;transform:translate(-50%,-50%) scale(.95);transition:opacity .3s cubic-bezier(.25,.8,.25,1),transform .3s cubic-bezier(.25,.8,.25,1)}dialog[open]{opacity:1;transform:translate(-50%,-50%) scale(1)}dialog::backdrop{background:rgba(0,0,0,.8)}dialog h3{margin-top:0;margin-bottom:1.5rem;font-size:1.4rem;font-weight:400}dialog p{margin-bottom:1rem;color:var(--text);line-height:1.8}dialog p:last-child{margin-bottom:1.5rem}dialog .close-btn{background:var(--sarcelle);color:var(--blanc);border:none;padding:.6rem 1.5rem;border-radius:8px;font-size:.95rem;cursor:pointer;transition:all .2s cubic-bezier(.25,.8,.25,1)}dialog .close-btn:hover,dialog .close-btn:focus{background:var(--sarcelle-light);transform:translateY(-1px)}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(min-width:768px){.header{padding:2.5rem 0}.hero{padding:6rem 0 3rem}.hero-content{padding:0 3rem}.values{padding:3rem 0}.contact-section{padding:4rem 0}.footer{padding:3.5rem 0}.footer-links{gap:2.5rem}}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WIDEHALO — En préparation</title>
+  <meta name="description" content="WideHalo prépare une nouvelle manière d'associer technologie, confiance et expertise au service des organisations, entre l'Europe et l'Afrique.">
+  <!-- À COMPLÉTER : Activer la ligne suivante pour bloquer l'indexation par les moteurs si souhaité -->
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="WIDEHALO — Quelque chose de large se prépare">
+  <meta property="og:description" content="Technologie, confiance et expertise humaine au service des organisations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://widehalo.com">
+
+  <style>
+    /* -------------------------------------------------------------
+       VARIABLES & DESIGN TOKENS
+       Couleurs : Marine #14213D, Sarcelle #0F766E, Ambre #B45309, Blanc cassé #F8FAFC
+       ------------------------------------------------------------- */
+    :root {
+      --bg-main: #14213D;
+      --bg-surface: #1B2B4C;
+      --bg-surface-elevated: #23365D;
+      --accent-teal: #0F766E;
+      --accent-teal-glow: rgba(15, 118, 110, 0.35);
+      --accent-teal-light: #14B8A6;
+      --accent-amber: #B45309;
+      --accent-amber-light: #F59E0B;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-subtle: rgba(248, 250, 252, 0.12);
+      --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --radius: 8px;
+      --radius-pill: 9999px;
+      --transition: 0.25s ease;
+      --max-width: 1040px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-stack);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Accessibilité clavier */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--accent-amber-light);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--text-primary);
+      color: var(--bg-main);
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--radius);
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* Container global */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* -------------------------------------------------------------
+       1. EN-TÊTE MINIMAL
+       ------------------------------------------------------------- */
+    .site-header {
+      width: 100%;
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      background: rgba(20, 33, 61, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 100;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .brand-logo-svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .header-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      transition: color var(--transition);
+    }
+    .header-link:hover {
+      color: var(--text-primary);
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0.2rem 0.35rem;
+      border-radius: 4px;
+      transition: color var(--transition);
+    }
+
+    .lang-btn.is-active {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .lang-btn:hover:not(.is-active) {
+      color: var(--text-primary);
+    }
+
+    /* -------------------------------------------------------------
+       2. SECTION PRINCIPALE (HERO)
+       ------------------------------------------------------------- */
+    .hero-section {
+      position: relative;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 0 5rem;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* Halo SVG en arrière-plan */
+    .hero-halo-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(90vw, 680px);
+      height: min(90vw, 680px);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.85;
+    }
+
+    .animated-halo-svg {
+      width: 100%;
+      height: 100%;
+      animation: haloBreath 8s ease-in-out infinite alternate;
+      transform-origin: center center;
+    }
+
+    @keyframes haloBreath {
+      0% {
+        transform: scale(0.94);
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(1.05);
+        opacity: 0.95;
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      color: var(--accent-teal-light);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 2.25rem;
+      font-weight: 400;
+    }
+
+    /* Statut discret avec pulsation lumineuse */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 1.15rem;
+      background: rgba(27, 43, 76, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      margin-bottom: 2.5rem;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: var(--accent-teal-light);
+      position: relative;
+      box-shadow: 0 0 8px var(--accent-teal-light);
+      flex-shrink: 0;
+    }
+
+    .pulse-dot::after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 50%;
+      border: 1px solid var(--accent-teal-light);
+      animation: pulseAnim 2s infinite;
+    }
+
+    @keyframes pulseAnim {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.9;
+      }
+      100% {
+        transform: scale(2.2);
+        opacity: 0;
+      }
+    }
+
+    /* Bouton principal (Ambre - touche rare) */
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent-amber);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 0.95rem 2.25rem;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 18px rgba(180, 83, 9, 0.35);
+      transition: transform var(--transition), background-color var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #92400e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(180, 83, 9, 0.5);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    /* -------------------------------------------------------------
+       3. TROIS VALEURS
+       ------------------------------------------------------------- */
+    .values-section {
+      padding: 5rem 0 6rem;
+      background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-surface) 100%);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .value-card {
+      background: rgba(20, 33, 61, 0.45);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .value-card:hover {
+      border-color: rgba(15, 118, 110, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .value-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: rgba(15, 118, 110, 0.15);
+      border: 1px solid rgba(15, 118, 110, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--accent-teal-light);
+    }
+
+    .value-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .value-desc {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* -------------------------------------------------------------
+       4. SECTION CONTACT
+       ------------------------------------------------------------- */
+    .contact-section {
+      padding: 5rem 0 6rem;
+      background: var(--bg-main);
+    }
+
+    .contact-container {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .contact-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .contact-intro {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .contact-form {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: calc(var(--radius) * 1.5);
+      padding: 2.25rem 1.75rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (min-width: 640px) {
+      .contact-form {
+        padding: 3rem 2.5rem;
+      }
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.35rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      text-align: left;
+    }
+
+    .form-label {
+      font-size: 0.885rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-label-hint {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .form-control {
+      width: 100%;
+      background: rgba(20, 33, 61, 0.8);
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      border-radius: var(--radius);
+      padding: 0.8rem 1rem;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.975rem;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-teal-light);
+      box-shadow: 0 0 0 3px var(--accent-teal-glow);
+      outline: none;
+    }
+
+    select.form-control {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg2+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+
+    select.form-control option {
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.5;
+    }
+
+    /* Champ Honeypot (invisible pour les humains) */
+    .hp-field {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Checkbox RGPD */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .checkbox-control {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-top: 0.15rem;
+      accent-color: var(--accent-teal);
+      border-radius: 4px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .checkbox-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      background: var(--accent-teal);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-pill);
+      padding: 0.95rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .form-submit-btn:hover {
+      background-color: #0b5953;
+      transform: translateY(-1px);
+    }
+
+    .form-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .privacy-notice {
+      text-align: center;
+      margin-top: 1.15rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Message de confirmation / alerte */
+    .form-feedback {
+      margin-top: 1.5rem;
+      padding: 1.15rem 1.25rem;
+      border-radius: var(--radius);
+      display: none;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .form-feedback.is-success {
+      display: block;
+      background: rgba(15, 118, 110, 0.25);
+      border: 1px solid var(--accent-teal);
+      color: #A7F3D0;
+    }
+
+    .form-feedback.is-error {
+      display: block;
+      background: rgba(180, 83, 9, 0.25);
+      border: 1px solid var(--accent-amber);
+      color: #FDE68A;
+    }
+
+    /* -------------------------------------------------------------
+       5. PIED DE PAGE & DIALOG MODALES
+       ------------------------------------------------------------- */
+    .site-footer {
+      margin-top: auto;
+      padding: 2.5rem 0 3rem;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-main);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 640px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .footer-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: inherit;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color var(--transition);
+      padding: 0.2rem 0.4rem;
+    }
+    .footer-btn:hover {
+      color: var(--text-primary);
+    }
+
+    /* Dialog Modals standard HTML5 */
+    dialog {
+      margin: auto;
+      max-width: 580px;
+      width: calc(100% - 2rem);
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      border: 1px solid var(--border-subtle);
+      border-radius: calc(var(--radius) * 1.5);
+      padding: 2.25rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    dialog::backdrop {
+      background: rgba(10, 18, 33, 0.75);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .dialog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 1rem;
+    }
+
+    .dialog-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .dialog-close-btn {
+      background: none;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+      font-size: 1.25rem;
+      line-height: 1;
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: color var(--transition), border-color var(--transition);
+    }
+
+    .dialog-close-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--text-primary);
+    }
+
+    .dialog-body {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .dialog-body h3 {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin-top: 0.5rem;
+    }
+
+    .dialog-body strong {
+      color: var(--text-primary);
+    }
+
+    /* -------------------------------------------------------------
+       ACCESSIBILITÉ : REDUCED MOTION
+       ------------------------------------------------------------- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .animated-halo-svg {
+        animation: none;
+      }
+      .pulse-dot::after {
+        animation: none;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header container">
-        <a href="#" class="logo" aria-label="WideHalo">
-            <span class="logo-halo">
-                <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <defs>
-                        <radialGradient id="hg" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                            <stop offset="0%" stop-color="#10B981" stop-opacity=".9"/>
-                            <stop offset="100%" stop-color="#0F766E" stop-opacity=".3"/>
-                        </radialGradient>
-                    </defs>
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#hg)" stroke-width="4"/>
-                </svg>
-            </span>
-            WIDEHALO
-        </a>
-        <nav class="header-nav">
-            <a href="#contact" data-i18n="navContact">Contact</a>
-            <div class="lang-toggle">
-                <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
-                <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-            </div>
-        </nav>
-    </header>
+  <!-- Lien d'évitement pour les lecteurs d'écran -->
+  <a href="#contenu-principal" class="skip-link" data-i18n="skipLink">Aller au contenu principal</a>
 
-    <main>
-        <section class="hero">
-            <div class="hero-halo" id="mainHalo">
-                <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <defs>
-                        <radialGradient id="hg2" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
-                            <stop offset="0%" stop-color="#10B981" stop-opacity=".15"/>
-                            <stop offset="100%" stop-color="#0F766E" stop-opacity="0"/>
-                        </radialGradient>
-                    </defs>
-                    <circle cx="50" cy="50" r="48" fill="none" stroke="url(#hg2)" stroke-width="2"/>
-                </svg>
-            </div>
-            <div class="hero-content">
-                <p class="hero-surtitle" data-i18n="surtitle">En préparation</p>
-                <h1 class="hero-title" data-i18n="title">Quelque chose de large se prépare.</h1>
-                <p class="hero-subtitle" data-i18n="subtitle">WideHalo construit, entre l'Europe et l'Afrique, une nouvelle manière d'associer technologie, confiance et expertise humaine au service des organisations.</p>
-                <p class="hero-status">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    <span data-i18n="status">Les travaux avancent. Ouverture progressive à des partenaires sélectionnés.</span>
-                </p>
-                <a href="#contact" class="btn-primary btn-glow" data-i18n="cta">Devenir partenaire</a>
-            </div>
-        </section>
+  <!-- 1. EN-TÊTE MINIMAL -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="WIDEHALO Accueil">
+        <!-- Petit halo SVG -->
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="50" cy="50" r="38" stroke="url(#miniHaloGrad)" stroke-width="12" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="22" stroke="rgba(248, 250, 252, 0.25)" stroke-width="4"/>
+          <defs>
+            <linearGradient id="miniHaloGrad" x1="12" y1="12" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0F766E"/>
+              <stop offset="1" stop-color="#14B8A6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">WIDEHALO</span>
+      </a>
 
-        <section class="values">
-            <div class="container values-grid">
-                <article class="value-item reveal">
-                    <div class="value-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <circle cx="12" cy="12" r="10"/>
-                            <circle cx="12" cy="12" r="6"/>
-                            <circle cx="12" cy="12" r="2"/>
-                        </svg>
-                    </div>
-                    <h2 class="value-title" data-i18n="val1Title">Exigence</h2>
-                    <p class="value-desc" data-i18n="val1Desc">Nous construisons lentement ce qui doit durer.</p>
-                </article>
-                <article class="value-item reveal">
-                    <div class="value-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h2 class="value-title" data-i18n="val2Title">Confiance</h2>
-                    <p class="value-desc" data-i18n="val2Desc">La transparence et la maîtrise des données comme principes.</p>
-                </article>
-                <article class="value-item reveal">
-                    <div class="value-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <circle cx="12" cy="5" r="1"/>
-                            <circle cx="12" cy="19" r="1"/>
-                            <circle cx="5" cy="12" r="1"/>
-                            <circle cx="19" cy="12" r="1"/>
-                            <circle cx="12" cy="12" r="1"/>
-                        </svg>
-                    </div>
-                    <h2 class="value-title" data-i18n="val3Title">Proximité</h2>
-                    <p class="value-desc" data-i18n="val3Desc">Des équipes au plus près des organisations que nous servons.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="contact-title reveal" data-i18n="contactTitle">Échangeons</h2>
-                <p class="contact-intro reveal" data-i18n="contactIntro">Vous êtes une organisation, un intégrateur, un cabinet ou un investisseur intéressé par une collaboration ? Laissez-nous vos coordonnées : nous revenons vers vous personnellement.</p>
-                <form id="contactForm" class="contact-form reveal">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="name" data-i18n="nameLabel">Nom</label>
-                            <input type="text" id="name" name="name" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="organization" data-i18n="orgLabel">Organisation</label>
-                            <input type="text" id="organization" name="organization" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="role" data-i18n="roleLabel">Fonction</label>
-                            <input type="text" id="role" name="role" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="emailLabel">Email professionnel</label>
-                            <input type="email" id="email" name="email" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="country" data-i18n="countryLabel">Pays</label>
-                            <input type="text" id="country" name="country" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="relation" data-i18n="relationLabel">Type de relation</label>
-                            <select id="relation" name="relation" required aria-required="true">
-                                <option value="" selected disabled data-i18n="relationPlaceholder">Sélectionnez</option>
-                                <option value="technological" data-i18n="relationTech">Partenaire technologique</option>
-                                <option value="commercial" data-i18n="relationComm">Partenaire commercial</option>
-                                <option value="pilot" data-i18n="relationPilot">Client pilote</option>
-                                <option value="other" data-i18n="relationOther">Autre</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" data-i18n="messageLabel">Message court (facultatif, 500 caractères max)</label>
-                        <textarea id="message" name="message" maxlength="500" aria-describedby="message-hint"></textarea>
-                        <span id="message-hint" class="visually-hidden" data-i18n="messageHint">500 caractères maximum</span>
-                    </div>
-                    <input type="text" name="honeypot" class="honeypot" tabindex="-1" autocomplete="off">
-                    <div class="consent-group">
-                        <input type="checkbox" id="consent" name="consent" required aria-required="true">
-                        <label for="consent" data-i18n="consentLabel">J'accepte que mes données soient utilisées uniquement pour me recontacter.</label>
-                    </div>
-                    <p class="form-footer" data-i18n="formFooter">Vos informations servent uniquement à vous recontacter. Elles ne sont ni revendues ni partagées.</p>
-                    <button type="submit" class="btn-primary btn-glow" data-i18n="submitBtn">Envoyer</button>
-                    <p id="formMessage" class="form-message" aria-live="polite"></p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 WideHalo</p>
-            <div class="footer-links">
-                <button id="legalBtn" data-i18n="legalBtn">Mentions légales</button>
-                <button id="privacyBtn" data-i18n="privacyBtn">Confidentialité</button>
-            </div>
+      <div class="header-actions">
+        <a href="#contact" class="header-link" data-i18n="navContact">Contact</a>
+        
+        <div class="lang-switcher" role="group" aria-label="Sélecteur de langue">
+          <button type="button" class="lang-btn is-active" id="btnLangFr" data-lang="fr" aria-pressed="true">FR</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" id="btnLangEn" data-lang="en" aria-pressed="false">EN</button>
         </div>
-    </footer>
+      </div>
+    </div>
+  </header>
 
-    <dialog id="legalDialog">
-        <h3 data-i18n="legalTitle">Mentions légales</h3>
-        <p data-i18n="legalEditor">Éditeur :  contact[at]widehalo[dot]com</p>
-        <p data-i18n="legalContact">Contact : contact[at]widehalo[dot]com</p>
-        <button class="close-btn" id="closeLegal" data-i18n="closeBtn">Fermer</button>
-    </dialog>
+  <main id="contenu-principal">
+    <!-- 2. SECTION PRINCIPALE (PLEIN ÉCRAN, FOND MARINE) -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <!-- Grand halo SVG en arrière-plan -->
+      <div class="hero-halo-container" aria-hidden="true">
+        <svg class="animated-halo-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="300" cy="300" r="220" stroke="url(#heroHaloGrad1)" stroke-width="46" opacity="0.85"/>
+          <circle cx="300" cy="300" r="260" stroke="url(#heroHaloGrad2)" stroke-width="14" opacity="0.45" stroke-dasharray="16 24"/>
+          <circle cx="300" cy="300" r="160" stroke="#0F766E" stroke-width="6" opacity="0.3"/>
+          <defs>
+            <linearGradient id="heroHaloGrad1" x1="80" y1="80" x2="520" y2="520" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0F766E"/>
+              <stop offset="50%" stop-color="#14B8A6"/>
+              <stop offset="100%" stop-color="#0F766E"/>
+            </linearGradient>
+            <linearGradient id="heroHaloGrad2" x1="120" y1="480" x2="480" y2="120" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#14B8A6"/>
+              <stop offset="100%" stop-color="#0F766E"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
 
-    <dialog id="privacyDialog">
-        <h3 data-i18n="privacyTitle">Confidentialité</h3>
-        <p data-i18n="privacyData">Données collectées : nom, organisation, fonction, email, pays, type de relation, message.</p>
-        <p data-i18n="privacyPurpose">Finalité : prise de contact pour une éventuelle collaboration.</p>
-        <p data-i18n="privacyDuration">Durée de conservation : 12 mois.</p>
-        <p data-i18n="privacyRights">Droits : accès, rectification, suppression. Contact : contact[at]widehalo[dot]com</p>
-        <button class="close-btn" id="closePrivacy" data-i18n="closeBtn">Fermer</button>
-    </dialog>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-eyebrow" data-i18n="heroEyebrow">En préparation</span>
+          <h1 class="hero-title" id="hero-title" data-i18n="heroTitle">Quelque chose de large se prépare.</h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            WideHalo construit, entre l'Europe et l'Afrique, une nouvelle manière d'associer technologie, confiance et expertise humaine au service des organisations.
+          </p>
 
-    <script>
-const FORM_ENDPOINT="";const CONTACT_EMAIL="contact@widehalo.com";const t={fr:{navContact:"Contact",surtitle:"En préparation",title:"Quelque chose de large se prépare.",subtitle:"WideHalo construit, entre l'Europe et l'Afrique, une nouvelle manière d'associer technologie, confiance et expertise humaine au service des organisations.",status:"Les travaux avancent. Ouverture progressive à des partenaires sélectionnés.",cta:"Devenir partenaire",contactTitle:"Échangeons",contactIntro:"Vous êtes une organisation, un intégrateur, un cabinet ou un investisseur intéressé par une collaboration ? Laissez-nous vos coordonnées : nous revenons vers vous personnellement.",nameLabel:"Nom",orgLabel:"Organisation",roleLabel:"Fonction",emailLabel:"Email professionnel",countryLabel:"Pays",relationLabel:"Type de relation",relationPlaceholder:"Sélectionnez",relationTech:"Partenaire technologique",relationComm:"Partenaire commercial",relationPilot:"Client pilote",relationOther:"Autre",messageLabel:"Message court (facultatif, 500 caractères max)",messageHint:"500 caractères maximum",consentLabel:"J'accepte que mes données soient utilisées uniquement pour me recontacter.",formFooter:"Vos informations servent uniquement à vous recontacter. Elles ne sont ni revendues ni partagées.",submitBtn:"Envoyer",successMsg:"Merci. Votre message est bien arrivé ; nous vous répondrons personnellement.",errorMsg:"Erreur. Veuillez réessayer.",legalBtn:"Mentions légales",legalTitle:"Mentions légales",legalEditor:"Éditeur : <!-- À COMPLÉTER -->",legalContact:"Contact : <!-- À COMPLÉTER -->",legalHost:"Hébergeur : <!-- À COMPLÉTER -->",privacyBtn:"Confidentialité",privacyTitle:"Confidentialité",privacyData:"Données collectées : nom, organisation, fonction, email, pays, type de relation, message.",privacyPurpose:"Finalité : prise de contact pour une éventuelle collaboration.",privacyDuration:"Durée de conservation : 12 mois.",privacyRights:"Droits : accès, rectification, suppression. Contact : <!-- À COMPLÉTER -->",closeBtn:"Fermer"},en:{navContact:"Contact",surtitle:"Under construction",title:"Something wide is taking shape.",subtitle:"WideHalo is building, between Europe and Africa, a new way of combining technology, trust and human expertise for the benefit of organisations.",status:"Work is progressing. Gradual opening to selected partners.",cta:"Become a partner",contactTitle:"Let's talk",contactIntro:"Are you an organisation, integrator, firm or investor interested in collaboration? Leave us your details: we will get back to you personally.",nameLabel:"Name",orgLabel:"Organisation",roleLabel:"Role",emailLabel:"Professional email",countryLabel:"Country",relationLabel:"Type of relationship",relationPlaceholder:"Select",relationTech:"Technological partner",relationComm:"Commercial partner",relationPilot:"Pilot client",relationOther:"Other",messageLabel:"Short message (optional, 500 characters max)",messageHint:"500 characters maximum",consentLabel:"I accept that my data will be used solely to contact me.",formFooter:"Your information is used only to contact you. It is neither sold nor shared.",submitBtn:"Send",successMsg:"Thank you. Your message has been received; we will respond personally.",errorMsg:"Error. Please try again.",legalBtn:"Legal notices",legalTitle:"Legal notices",legalEditor:"Publisher: <!-- À COMPLÉTER -->",legalContact:"Contact: <!-- À COMPLÉTER -->",legalHost:"Host: <!-- À COMPLÉTER -->",privacyBtn:"Privacy",privacyTitle:"Privacy",privacyData:"Data collected: name, organisation, role, email, country, type of relationship, message.",privacyPurpose:"Purpose: contact for potential collaboration.",privacyDuration:"Retention period: 12 months.",privacyRights:"Rights: access, rectification, deletion. Contact: <!-- À COMPLÉTER -->",closeBtn:"Close"}};const l=e=>{document.querySelectorAll('[data-i18n]').forEach(n=>{const k=n.dataset.i18n;if(n.tagName==='SELECT'){Array.from(n.options).forEach(o=>{if(o.dataset.i18n){o.textContent=t[e][o.dataset.i18n]}})}else if(n.tagName!=='OPTION'||!n.dataset.i18n){n.textContent=t[e][k]}})};const s=e=>{document.querySelectorAll('.lang-btn').forEach(n=>{n.classList.toggle('active',n.dataset.lang===e)})};document.addEventListener('DOMContentLoaded',()=>{l('fr');s('fr');document.querySelectorAll('.lang-btn').forEach(b=>{b.addEventListener('click',()=>{l(b.dataset.lang);s(b.dataset.lang)})});gsap.registerPlugin(ScrollTrigger);gsap.to("#mainHalo",{duration:12,scale:1.2,rotation:360,opacity:0.35,ease:"sine.inOut",repeat:-1,yoyo:true});gsap.to("#mainHalo svg circle",{duration:8,attr:{r:45},strokeWidth:3,ease:"sine.inOut",repeat:-1,yoyo:true});gsap.utils.toArray('.reveal').forEach((el,i)=>{gsap.from(el,{scrollTrigger:{trigger:el,start:"top 88%",toggleActions:"play none none reverse"},y:40,opacity:0,duration:1.2,ease:"power2.out",delay:i*.08})});const f=document.getElementById('contactForm');const m=document.getElementById('formMessage');f.addEventListener('submit',async e=>{e.preventDefault();const hp=f.querySelector('.honeypot').value;if(hp)return;const d={name:f.name.value,organization:f.organization.value,role:f.role.value,email:f.email.value,country:f.country.value,relation:f.relation.value,message:f.message.value,consent:f.consent.checked};if(!d.consent){m.textContent=t[f.dataset.lang||'fr'].consentLabel;m.style.color='#B45309';return}if(FORM_ENDPOINT){try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});if(r.ok){m.textContent=t[f.dataset.lang||'fr'].successMsg;m.style.color='var(--sarcelle-light)';f.reset()}else{m.textContent=t[f.dataset.lang||'fr'].errorMsg;m.style.color='#B45309'}}catch{m.textContent=t[f.dataset.lang||'fr'].errorMsg;m.style.color='#B45309'}}}else{const params=new URLSearchParams(d);window.location.href=`mailto:${CONTACT_EMAIL}?${params.toString()}`}});document.getElementById('legalBtn').addEventListener('click',()=>document.getElementById('legalDialog').showModal());document.getElementById('closeLegal').addEventListener('click',()=>document.getElementById('legalDialog').close());document.getElementById('privacyBtn').addEventListener('click',()=>document.getElementById('privacyDialog').showModal());document.getElementById('closePrivacy').addEventListener('click',()=>document.getElementById('privacyDialog').close())});
-    </script>
+          <div>
+            <div class="status-badge" role="status">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span data-i18n="heroStatus">Les travaux avancent. Ouverture progressive à des partenaires sélectionnés.</span>
+            </div>
+          </div>
+
+          <div>
+            <a href="#contact" class="btn-primary" data-i18n="heroCta">Devenir partenaire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TROIS VALEURS -->
+    <section class="values-section" aria-labelledby="values-heading">
+      <div class="container">
+        <h2 id="values-heading" class="hp-field" data-i18n="valuesSrTitle">Nos engagements</h2>
+        
+        <div class="values-grid">
+          <!-- Valeur 1 : Exigence -->
+          <article class="value-card">
+            <div class="value-icon-box" aria-hidden="true">
+              <!-- Icône Compas / Règle / Lignes pures au trait -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3v4"/>
+                <path d="M12 17v4"/>
+                <path d="M3 12h4"/>
+                <path d="M17 12h4"/>
+              </svg>
+            </div>
+            <h3 class="value-title" data-i18n="val1Title">Exigence</h3>
+            <p class="value-desc" data-i18n="val1Desc">Nous construisons lentement ce qui doit durer.</p>
+          </article>
+
+          <!-- Valeur 2 : Confiance -->
+          <article class="value-card">
+            <div class="value-icon-box" aria-hidden="true">
+              <!-- Icône Bouclier sobre au trait -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="value-title" data-i18n="val2Title">Confiance</h3>
+            <p class="value-desc" data-i18n="val2Desc">La transparence et la maîtrise des données comme principes.</p>
+          </article>
+
+          <!-- Valeur 3 : Proximité -->
+          <article class="value-card">
+            <div class="value-icon-box" aria-hidden="true">
+              <!-- Icône Connexion / Passerelle / Réseau sobre au trait -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="value-title" data-i18n="val3Title">Proximité</h3>
+            <p class="value-desc" data-i18n="val3Desc">Des équipes au plus près des organisations que nous servons.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECTION CONTACT (#contact) -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-container">
+        <header class="contact-header">
+          <h2 class="contact-title" id="contact-heading" data-i18n="contactTitle">Échangeons</h2>
+          <p class="contact-intro" data-i18n="contactIntro">
+            Vous êtes une organisation, un intégrateur, un cabinet ou un investisseur intéressé par une collaboration ? Laissez-nous vos coordonnées : nous revenons vers vous personnellement.
+          </p>
+        </header>
+
+        <form id="partnerForm" class="contact-form" novalidate>
+          <!-- Champ Honeypot invisible anti-robot -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="hp_check">Ne pas remplir ce champ si vous êtes humain :</label>
+            <input type="text" id="hp_check" name="hp_check" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-grid">
+            <div class="form-grid-2">
+              <!-- Nom -->
+              <div class="form-group">
+                <label for="name" class="form-label">
+                  <span data-i18n="formName">Nom complet</span> *
+                </label>
+                <input type="text" id="name" name="name" class="form-control" required autocomplete="name" placeholder="Ex. Sophie Martin">
+              </div>
+
+              <!-- Organisation -->
+              <div class="form-group">
+                <label for="organization" class="form-label">
+                  <span data-i18n="formOrg">Organisation</span> *
+                </label>
+                <input type="text" id="organization" name="organization" class="form-control" required autocomplete="organization" placeholder="Ex. Groupe Atlas">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <!-- Fonction -->
+              <div class="form-group">
+                <label for="role" class="form-label">
+                  <span data-i18n="formRole">Fonction</span> *
+                </label>
+                <input type="text" id="role" name="role" class="form-control" required placeholder="Ex. Direction des opérations">
+              </div>
+
+              <!-- E-mail pro -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  <span data-i18n="formEmail">E-mail professionnel</span> *
+                </label>
+                <input type="email" id="email" name="email" class="form-control" required autocomplete="email" placeholder="contact@organisation.com">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <!-- Pays -->
+              <div class="form-group">
+                <label for="country" class="form-label">
+                  <span data-i18n="formCountry">Pays</span> *
+                </label>
+                <input type="text" id="country" name="country" class="form-control" required placeholder="Ex. France, Sénégal, Maroc...">
+              </div>
+
+              <!-- Type de relation -->
+              <div class="form-group">
+                <label for="partnership_type" class="form-label">
+                  <span data-i18n="formType">Type de relation</span> *
+                </label>
+                <select id="partnership_type" name="partnership_type" class="form-control" required>
+                  <option value="" disabled selected data-i18n="optSelect">Sélectionnez une option</option>
+                  <option value="Partenaire technologique" data-i18n="optTech">Partenaire technologique</option>
+                  <option value="Partenaire commercial" data-i18n="optBiz">Partenaire commercial</option>
+                  <option value="Client pilote" data-i18n="optPilot">Client pilote</option>
+                  <option value="Autre" data-i18n="optOther">Autre</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message court -->
+            <div class="form-group">
+              <label for="message" class="form-label">
+                <span data-i18n="formMsg">Message</span>
+                <span class="form-label-hint" data-i18n="formMsgHint">(Facultatif, 500 car. max)</span>
+              </label>
+              <textarea id="message" name="message" class="form-control" maxlength="500" placeholder="Précisez succinctement le contexte de votre prise de contact..."></textarea>
+            </div>
+
+            <!-- Case RGPD -->
+            <div class="checkbox-group">
+              <input type="checkbox" id="rgpdConsent" name="rgpdConsent" class="checkbox-control" required>
+              <label for="rgpdConsent" class="checkbox-label" data-i18n="formConsent">
+                J'accepte que les informations saisies soient utilisées exclusivement pour me recontacter dans le cadre de cette démarche.
+              </label>
+            </div>
+
+            <!-- Bouton d'envoi -->
+            <div>
+              <button type="submit" id="submitBtn" class="form-submit-btn" data-i18n="formSubmit">
+                Envoyer la demande
+              </button>
+            </div>
+          </div>
+
+          <p class="privacy-notice" data-i18n="privacyNotice">
+            Vos informations servent uniquement à vous recontacter. Elles ne sont ni revendues ni partagées.
+          </p>
+
+          <!-- Zone de confirmation ou d'erreur -->
+          <div id="formFeedback" class="form-feedback" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. PIED DE PAGE -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>© 2026 WideHalo</div>
+      
+      <ul class="footer-links">
+        <li>
+          <button type="button" class="footer-btn" id="openLegalBtn" data-i18n="btnLegal">Mentions légales</button>
+        </li>
+        <li aria-hidden="true">·</li>
+        <li>
+          <button type="button" class="footer-btn" id="openPrivacyBtn" data-i18n="btnPrivacy">Confidentialité</button>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Panneau Modal : Mentions Légales -->
+  <dialog id="legalDialog" aria-labelledby="legalTitle">
+    <div class="dialog-header">
+      <h2 id="legalTitle" class="dialog-title" data-i18n="dialogLegalTitle">Mentions légales</h2>
+      <button type="button" class="dialog-close-btn" data-close="legalDialog" aria-label="Fermer">✕</button>
+    </div>
+    <div class="dialog-body">
+      <h3>Éditeur du site</h3>
+      <p>
+        <strong>WIDEHALO</strong><br>
+        <!-- À COMPLÉTER : Forme juridique et capital social -->
+        Société par actions simplifiée (en cours d'immatriculation)<br>
+        <!-- À COMPLÉTER : Adresse du siège social -->
+        Siège social : [Adresse du siège — À COMPLÉTER]<br>
+        <!-- À COMPLÉTER : SIRET / RCS -->
+        RCS : [Numéro RCS — À COMPLÉTER]<br>
+        Directeur de la publication : Direction Générale
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        <!-- À COMPLÉTER : Adresse e-mail officielle -->
+        Courriel : contact@widehalo.com
+      </p>
+
+      <h3>Hébergement</h3>
+      <p>
+        <!-- À COMPLÉTER : Informations sur l'hébergeur -->
+        Ce site est hébergé par : [Nom de l'hébergeur, adresse et contact — À COMPLÉTER].
+      </p>
+
+      <h3>Propriété intellectuelle</h3>
+      <p>
+        L'ensemble des éléments graphiques, marques et contenus textuels sont la propriété exclusive de WIDEHALO.
+      </p>
+    </div>
+  </dialog>
+
+  <!-- Panneau Modal : Politique de Confidentialité -->
+  <dialog id="privacyDialog" aria-labelledby="privacyTitle">
+    <div class="dialog-header">
+      <h2 id="privacyTitle" class="dialog-title" data-i18n="dialogPrivacyTitle">Politique de confidentialité</h2>
+      <button type="button" class="dialog-close-btn" data-close="privacyDialog" aria-label="Fermer">✕</button>
+    </div>
+    <div class="dialog-body">
+      <h3>Données collectées</h3>
+      <p>
+        Les données recueillies via le formulaire de contact se limitent à : nom, organisation, fonction, adresse électronique professionnelle, pays, catégorie de partenariat envisagée et message d'accompagnement éventuel.
+      </p>
+
+      <h3>Finalité du traitement</h3>
+      <p>
+        Ces informations sont rigoureusement dédiées à la gestion des échanges pré-partenariaux et aux réponses directes et personnalisées apportées aux sollicitations.
+      </p>
+
+      <h3>Conservation des données</h3>
+      <p>
+        Les données transmises sont conservées pour une durée maximale de <strong>12 mois</strong> à compter de leur réception, puis supprimées de manière sécurisée.
+      </p>
+
+      <h3>Absence de traceurs & cookies</h3>
+      <p>
+        Ce site n'utilise aucun cookie de profilage, aucun outil d'analyse tiers ni aucun traceur publicitaire.
+      </p>
+
+      <h3>Vos droits</h3>
+      <p>
+        Conformément à la réglementation applicable (RGPD), vous disposez d'un droit permanent d'accès, de rectification et de suppression des données vous concernant.
+      </p>
+
+      <h3>Exercice de vos droits</h3>
+      <p>
+        <!-- À COMPLÉTER : Point de contact DPO ou référent données -->
+        Pour toute demande, adressez un message à : <strong>contact@widehalo.com</strong>
+      </p>
+    </div>
+  </dialog>
+
+  <!-- -------------------------------------------------------------
+       JAVASCRIPT MINIMAL & AUTONOME
+       ------------------------------------------------------------- -->
+  <script>
+    // Configuration du formulaire (À COMPLÉTER)
+    // 1. FORM_ENDPOINT : URL de l'API recevant la requête POST en JSON. Laisser vide "" pour utiliser le mailto fallback.
+    const FORM_ENDPOINT = ""; 
+    // 2. CONTACT_EMAIL : Adresse de destination pour le fallback mailto
+    const CONTACT_EMAIL = "contact@widehalo.com";
+
+    // Textes multilingues FR / EN
+    const translations = {
+      fr: {
+        skipLink: "Aller au contenu principal",
+        navContact: "Contact",
+        heroEyebrow: "En préparation",
+        heroTitle: "Quelque chose de large se prépare.",
+        heroSubtitle: "WideHalo construit, entre l'Europe et l'Afrique, une nouvelle manière d'associer technologie, confiance et expertise humaine au service des organisations.",
+        heroStatus: "Les travaux avancent. Ouverture progressive à des partenaires sélectionnés.",
+        heroCta: "Devenir partenaire",
+        valuesSrTitle: "Nos engagements",
+        val1Title: "Exigence",
+        val1Desc: "Nous construisons lentement ce qui doit durer.",
+        val2Title: "Confiance",
+        val2Desc: "La transparence et la maîtrise des données comme principes.",
+        val3Title: "Proximité",
+        val3Desc: "Des équipes au plus près des organisations que nous servons.",
+        contactTitle: "Échangeons",
+        contactIntro: "Vous êtes une organisation, un intégrateur, un cabinet ou un investisseur intéressé par une collaboration ? Laissez-nous vos coordonnées : nous revenons vers vous personnellement.",
+        formName: "Nom complet",
+        formOrg: "Organisation",
+        formRole: "Fonction",
+        formEmail: "E-mail professionnel",
+        formCountry: "Pays",
+        formType: "Type de relation",
+        optSelect: "Sélectionnez une option",
+        optTech: "Partenaire technologique",
+        optBiz: "Partenaire commercial",
+        optPilot: "Client pilote",
+        optOther: "Autre",
+        formMsg: "Message",
+        formMsgHint: "(Facultatif, 500 car. max)",
+        formConsent: "J'accepte que les informations saisies soient utilisées exclusivement pour me recontacter dans le cadre de cette démarche.",
+        formSubmit: "Envoyer la demande",
+        privacyNotice: "Vos informations servent uniquement à vous recontacter. Elles ne sont ni revendues ni partagées.",
+        btnLegal: "Mentions légales",
+        btnPrivacy: "Confidentialité",
+        dialogLegalTitle: "Mentions légales",
+        dialogPrivacyTitle: "Politique de confidentialité",
+        successMsg: "Merci. Votre message est bien arrivé ; nous vous répondrons personnellement.",
+        errorValidation: "Veuillez renseigner l'ensemble des champs obligatoires et valider le consentement.",
+        errorGeneral: "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter par e-mail."
+      },
+      en: {
+        skipLink: "Skip to main content",
+        navContact: "Contact",
+        heroEyebrow: "In preparation",
+        heroTitle: "Something wide is taking shape.",
+        heroSubtitle: "WideHalo is building, across Europe and Africa, a new way to combine technology, trust, and human expertise in service of organizations.",
+        heroStatus: "Work is progressing. Phased opening to selected partners.",
+        heroCta: "Become a partner",
+        valuesSrTitle: "Our commitments",
+        val1Title: "Rigor",
+        val1Desc: "We build deliberately what is meant to endure.",
+        val2Title: "Trust",
+        val2Desc: "Transparency and data sovereignty as core principles.",
+        val3Title: "Proximity",
+        val3Desc: "Teams closest to the organizations we serve.",
+        contactTitle: "Get in touch",
+        contactIntro: "Are you an organization, systems integrator, advisory firm, or investor interested in collaborating? Leave your details: we will get back to you personally.",
+        formName: "Full name",
+        formOrg: "Organization",
+        formRole: "Job title",
+        formEmail: "Business email",
+        formCountry: "Country",
+        formType: "Relationship type",
+        optSelect: "Select an option",
+        optTech: "Technology partner",
+        optBiz: "Commercial partner",
+        optPilot: "Pilot client",
+        optOther: "Other",
+        formMsg: "Message",
+        formMsgHint: "(Optional, 500 chars max)",
+        formConsent: "I agree that the details provided will be used exclusively to contact me regarding this inquiry.",
+        formSubmit: "Submit inquiry",
+        privacyNotice: "Your details are strictly used to contact you. They are never sold or shared.",
+        btnLegal: "Legal notice",
+        btnPrivacy: "Privacy policy",
+        dialogLegalTitle: "Legal notice",
+        dialogPrivacyTitle: "Privacy policy",
+        successMsg: "Thank you. Your message has been received; we will respond to you personally.",
+        errorValidation: "Please complete all required fields and accept the consent checkbox.",
+        errorGeneral: "An error occurred while sending. Please try again or reach out by email."
+      }
+    };
+
+    let currentLang = "fr";
+
+    // Bascule de langue
+    function setLanguage(lang) {
+      if (!translations[lang]) return;
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Mise à jour de l'état des boutons
+      const btnFr = document.getElementById("btnLangFr");
+      const btnEn = document.getElementById("btnLangEn");
+      if (lang === "fr") {
+        btnFr.classList.add("is-active");
+        btnFr.setAttribute("aria-pressed", "true");
+        btnEn.classList.remove("is-active");
+        btnEn.setAttribute("aria-pressed", "false");
+      } else {
+        btnEn.classList.add("is-active");
+        btnEn.setAttribute("aria-pressed", "true");
+        btnFr.classList.remove("is-active");
+        btnFr.setAttribute("aria-pressed", "false");
+      }
+    }
+
+    document.getElementById("btnLangFr").addEventListener("click", () => setLanguage("fr"));
+    document.getElementById("btnLangEn").addEventListener("click", () => setLanguage("en"));
+
+    // Gestion des modales <dialog>
+    const legalDialog = document.getElementById("legalDialog");
+    const privacyDialog = document.getElementById("privacyDialog");
+
+    document.getElementById("openLegalBtn").addEventListener("click", () => legalDialog.showModal());
+    document.getElementById("openPrivacyBtn").addEventListener("click", () => privacyDialog.showModal());
+
+    document.querySelectorAll("[data-close]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const dialogId = btn.getAttribute("data-close");
+        document.getElementById(dialogId)?.close();
+      });
+    });
+
+    // Fermeture des modales au clic sur le backdrop
+    [legalDialog, privacyDialog].forEach(dialog => {
+      dialog.addEventListener("click", (e) => {
+        const rect = dialog.getBoundingClientRect();
+        const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+                            rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+        if (!isInDialog) dialog.close();
+      });
+    });
+
+    // Gestion du formulaire de contact
+    const partnerForm = document.getElementById("partnerForm");
+    const formFeedback = document.getElementById("formFeedback");
+    const submitBtn = document.getElementById("submitBtn");
+
+    partnerForm.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      formFeedback.className = "form-feedback";
+      formFeedback.textContent = "";
+
+      // Vérification Honeypot anti-robot
+      const hp = document.getElementById("hp_check").value;
+      if (hp) {
+        // Soumission silencieuse pour les robots
+        formFeedback.className = "form-feedback is-success";
+        formFeedback.textContent = translations[currentLang].successMsg;
+        partnerForm.reset();
+        return;
+      }
+
+      // Validation des champs
+      const name = document.getElementById("name").value.trim();
+      const org = document.getElementById("organization").value.trim();
+      const role = document.getElementById("role").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const country = document.getElementById("country").value.trim();
+      const type = document.getElementById("partnership_type").value;
+      const message = document.getElementById("message").value.trim();
+      const consent = document.getElementById("rgpdConsent").checked;
+
+      if (!name || !org || !role || !email || !country || !type || !consent) {
+        formFeedback.className = "form-feedback is-error";
+        formFeedback.textContent = translations[currentLang].errorValidation;
+        return;
+      }
+
+      const payload = {
+        name,
+        organization: org,
+        role,
+        email,
+        country,
+        partnership_type: type,
+        message,
+        consent,
+        language: currentLang,
+        timestamp: new Date().toISOString()
+      };
+
+      // Si FORM_ENDPOINT est configuré : envoi en POST JSON
+      if (FORM_ENDPOINT && FORM_ENDPOINT.trim() !== "") {
+        submitBtn.disabled = true;
+        try {
+          const response = await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (response.ok) {
+            formFeedback.className = "form-feedback is-success";
+            formFeedback.textContent = translations[currentLang].successMsg;
+            partnerForm.reset();
+          } else {
+            throw new Error("Server response not ok");
+          }
+        } catch (error) {
+          formFeedback.className = "form-feedback is-error";
+          formFeedback.textContent = translations[currentLang].errorGeneral;
+        } finally {
+          submitBtn.disabled = false;
+        }
+      } else {
+        // Fallback mailto si FORM_ENDPOINT est vide
+        const subject = encodeURIComponent(`[WIDEHALO] Contact Partenaire : ${org} (${name})`);
+        const bodyLines = [
+          `Nom: ${name}`,
+          `Organisation: ${org}`,
+          `Fonction: ${role}`,
+          `E-mail: ${email}`,
+          `Pays: ${country}`,
+          `Type de relation: ${type}`,
+          `Message: ${message || "Aucun message spécifique"}`,
+          `Consentement RGPD: Validé`
+        ];
+        const body = encodeURIComponent(bodyLines.join("\n"));
+        
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+        formFeedback.className = "form-feedback is-success";
+        formFeedback.textContent = translations[currentLang].successMsg;
+        partnerForm.reset();
+      }
+    });
+  </script>
 </body>
 </html>
